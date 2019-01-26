@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Palette from './Palette.js'
 import './App.css';
 
-
+// TODO:
+//  - Add scroll or some scroll intuition assist
+//  - Add some background animation? for the aestheticssss
 class App extends Component {
 
 
@@ -50,7 +52,7 @@ class App extends Component {
     );
   }
 
-  
+
 }
 
 

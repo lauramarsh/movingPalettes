@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SideBar from './SideBar.js';
+import Easel from './Easel.js';
 import './App.css';
 
 
@@ -10,9 +11,7 @@ class Palette extends Component {
     return (
       <div className='palette'>
         <SideBar/>
-        <div className='easel'>
-
-        </div>
+        <Easel gifTitle=""/>
       </div>
     );
   }

@@ -2,7 +2,46 @@
 .easel {
   height: 100%;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: white;
+  position: relative;
+}
+
+.easel__canvas {
+  max-height: 750px;
+  width: 85%;
+  display: block;
+
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%,-50%);
+}
+
+.gifNav {
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%,-50%);
+}
+
+.gifNav__button {
+  height: 30px;
+  width: 30px;
+  border-color: white;
+  border-width: 2px;
+  border-style: outset;
+  border-radius: 100%;
+  margin: 20px 0 20px 0;
+}
+
+.gifNav__button:hover {
+  border-style: inset;
+  cursor: pointer;
 }
 
 .palette {
@@ -14,7 +53,8 @@
 .sideBar {
   height: 100%;
   width: 25%;
-  background-color: #ae9191;
+  background-color: #eeeeee;
+  position: relative;
 }
 
 .titleCard {}
@@ -47,39 +87,3 @@
   position: relative;
   margin-top: 50%;
 }
-
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-} */
-
-
-/*
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
