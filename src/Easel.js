@@ -6,9 +6,7 @@ import './App.css';
 class Easel extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      gifTitle: this.props.gifTitle,
-    }
+
   }
 
 
@@ -16,9 +14,9 @@ class Easel extends Component {
     return (
       <div className='easel'>
         <img
-          src={'/' + this.state.gifTitle + '.gif'}
+          src={'/' + this.props.gifTitle + '.gif'}
           className='easel__canvas'
-          alt={this.state.gifTitle}
+          alt={this.props.gifTitle}
         />
       </div>
     );
