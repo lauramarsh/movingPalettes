@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import gifData from './GifData.js'; // This is now here & sidebar.js - optimize?
 import './App.css';
 
 
@@ -8,21 +7,15 @@ class ColorCollection extends Component {
 
   constructor(props) {
     super(props);
-    const gifTitle = this.props.gifTitle;
-    var curGifColors;
-    for (var d in gifData) {
-      if (gifData[d].fileName === gifTitle) {
-        curGifColors = gifData[d].colors;
-      }
-    }
 
     this.state = {
       colorDisplayNum: 7, // total number of display colors
       colorTotalNum: 12, // total number of colors in gifdata
-      currentTitle: gifTitle,
-      currentColors: curGifColors,
+      // currentTitle: gifTitle,
+      // currentColors: curGifColors,
     };
   }
+
 
   getDisplayColors() {
     // extract the hexes from the appropriate random colors
@@ -31,15 +24,15 @@ class ColorCollection extends Component {
 
     displayColors = displayColors.fill().map(
       (v, i) => {
-        var curRandomColor = this.state.currentColors[
+        var curRandomColor = this.props.gifColors[
           'c' + randomsIterator.next().value.toString()
         ];
         return curRandomColor;
       }
     );
-
     return displayColors;
   }
+
 
   getRandomNums() {
     var usedNums = new Set();
@@ -56,11 +49,20 @@ class ColorCollection extends Component {
     return usedNums;
   }
 
+
   render() {
-    this.getDisplayColors();
+    const displayColors = this.getDisplayColors();
+    const colorItems = displayColors.map(
+      (item) =>
+        <div
+          className="colors__color"
+          style={{backgroundColor: item,}}
+        />
+    );
+
     return (
       <div className="colors">
-
+        {colorItems}
       </div>
     );
   }

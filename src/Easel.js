@@ -5,21 +5,25 @@ import './App.css';
 
 
 class Easel extends Component {
-  // constructor(props) {
-  //   super(props);
-  //
-  // }
+  constructor(props) {
+    super(props);
+  }
 
 
   render() {
     return (
       <div className='easel'>
-        <img
-          src={'/' + this.props.gifTitle + '.gif'}
-          className='easel__canvas'
-          alt={this.props.gifTitle}
-        />
-        <ColorCollection gifTitle={this.props.gifTitle}/>
+        <div className='easel__canvas'>
+          <img
+            src={'/' + this.props.gifTitle + '.gif'}
+            className='easel__canvas__img'
+            alt={this.props.gifTitle}
+          />
+          <ColorCollection
+            gifTitle={this.props.gifTitle}
+            gifColors={this.props.gifColors}
+          />
+        </div>
       </div>
     );
   }

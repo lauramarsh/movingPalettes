@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import gifData from './GifData.js';
 import GifNav from './GifNav.js';
 import './App.css';
 
@@ -27,7 +26,7 @@ class SideBar extends Component {
     return (
       <div className='sideBar'>
         <GifNav
-          items={gifData}
+          items={this.props.gifData}
           currentGif={this.props.currentGif}
           handleChange={this.handleChange}
         />
