@@ -1,9 +1,15 @@
 
+
+.colors {
+  display: inline-flex;
+}
+
 .easel {
   height: 100%;
   width: 100%;
   background-color: white;
   position: relative;
+  display: block;
 }
 
 .easel__canvas {

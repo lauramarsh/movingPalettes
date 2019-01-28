@@ -25,7 +25,11 @@ class GifNav extends Component {
             <div
               className='gifNav__button'
               value={item.fileName}
-              style={{backgroundColor: item.colors.c1, borderStyle: 'inset'}}
+              style={{
+                      backgroundColor: item.colors['c1'],
+                      borderStyle: 'inset',
+                      cursor: 'default',
+                    }}
             />
           </li>
         :
@@ -34,7 +38,7 @@ class GifNav extends Component {
               className='gifNav__button'
               onClick={(e) => this.handleChange(e, item.fileName)}
               value={item.fileName}
-              style={{backgroundColor: item.colors.c1}}
+              style={{backgroundColor: item.colors['c1']}}
             />
           </li>
       }
