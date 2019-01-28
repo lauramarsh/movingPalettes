@@ -17,32 +17,34 @@ class App extends Component {
 
 
   componentDidMount() {
-    window.addEventListener('scroll', (event) => this.handleScroll(event));
+    window.addEventListener('wheel', (event) => this.handleScroll(event));
   };
 
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('wheel', this.handleScroll);
   };
 
 
   handleScroll(event) {
-    if ((document.body.getBoundingClientRect()).top < this.state.scrollPos) {
-      // SCROLLING DOWN
-      console.log("down");
-      document.getElementById('titleCard').style.top = "-100%";
-    } else {
-      // SCROLLING UP
-      console.log("up");
-      document.getElementById('titleCard').style.top = "0";
-    }
-    this.setState({scrollPos: (document.body.getBoundingClientRect()).top});
+    setTimeout( () => {
+      if (event.deltaY > 0) {
+        // SCROLLING DOWN
+        console.log("DOWN");
+        document.getElementById('titleCard').style.top = "-100%";
+      } else if (event.deltaY < 0) {
+        // SCROLLING UP
+        console.log("UP");
+        document.getElementById('titleCard').style.top = "0";
+      }
+    }, 450);
+
   };
 
 
   render() {
     return (
-      <div className="titleCard">
+      <div className="movingPalettes">
         <div className="titleCard__background" id="titleCard">
           <h1 className="titleCard__title">Moving Palettes</h1>
           <p className="titleCard__subtitle">palettes that move.</p>
