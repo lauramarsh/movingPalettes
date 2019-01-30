@@ -1,6 +1,6 @@
 
 // TODO: add more gifs, more colors to each gif for future use
-// future use aka select a random 7 from the 14 colors
+// future use aka select a random 7 from the 12 colors
 
 // Gif Palette Info Object
 const gifData = [
