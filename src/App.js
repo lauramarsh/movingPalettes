@@ -27,6 +27,7 @@ class App extends Component {
 
 
   handleScroll(event) {
+    console.log("parent propagation");
     setTimeout( () => {
       if (event.deltaY > 0) {
         // SCROLLING DOWN

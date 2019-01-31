@@ -17,6 +17,12 @@ class SideBar extends Component {
   }
 
 
+  componentDidMount() {
+    document.getElementById('SideBar').addEventListener('wheel', (event) => event.stopPropagation());
+  }
+
+
+
   handleChange(gifTitle) {
     this.props.handleChange(gifTitle);
   }
@@ -24,7 +30,7 @@ class SideBar extends Component {
 
   render() {
     return (
-      <div className='sideBar'>
+      <div className='sideBar' id='SideBar'>
         <GifNav
           items={this.props.gifData}
           currentGif={this.props.currentGif}

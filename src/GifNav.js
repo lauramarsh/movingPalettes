@@ -21,7 +21,7 @@ class GifNav extends Component {
     const palItems = data.map(
       (item) => {
         return (item.fileName === gifTitle) ?
-          <li>
+          <li className='gifNav__button--left'>
             <div
               className='gifNav__button'
               value={item.fileName}
