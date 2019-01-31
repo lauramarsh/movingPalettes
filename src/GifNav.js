@@ -33,7 +33,7 @@ class GifNav extends Component {
             />
           </li>
         :
-          <li>
+          <li className='gifNav__button--left'>
             <div
               className='gifNav__button'
               onClick={(e) => this.handleChange(e, item.fileName)}
