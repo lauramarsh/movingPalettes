@@ -47,7 +47,7 @@ class App extends Component {
       <div className="movingPalettes">
         <div className="titleCard__background" id="titleCard">
           <h1 className="titleCard__title">Moving Palettes</h1>
-          <p className="titleCard__subtitle">palettes that move.</p>
+          <p className="titleCard__subtitle">palettes made from gifs and cinemagraphs</p>
         </div>
         <Palette/>
       </div>
